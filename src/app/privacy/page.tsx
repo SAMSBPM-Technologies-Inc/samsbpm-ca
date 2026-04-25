@@ -51,6 +51,19 @@ export default function PrivacyPage() {
           </p>
         </div>
 
+        {/* Product-specific policy notice */}
+        <div className="rounded-xl border border-[var(--border)] bg-[var(--card)] p-4 mb-6 flex items-start justify-between gap-4 text-sm">
+          <p className="text-[var(--muted-foreground)]">
+            Looking for the privacy policy for our <strong className="text-[var(--foreground)]">WhatsApp Commerce Worker</strong> platform?
+          </p>
+          <Link
+            href="/privacy/docs"
+            className="shrink-0 text-brand-500 hover:text-brand-600 font-medium transition-colors"
+          >
+            View →
+          </Link>
+        </div>
+
         {/* Intro */}
         <div className="rounded-2xl border border-brand-500/20 bg-brand-500/5 p-5 mb-10 text-sm text-[var(--muted-foreground)] leading-relaxed">
           {COMPANY} (&quot;SAMSBPM&quot;, &quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) is committed to protecting the privacy
