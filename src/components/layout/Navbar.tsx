@@ -44,7 +44,15 @@ export default function Navbar() {
               width={200}
               height={55}
               priority
-              className="h-11 w-auto"
+              className="h-11 w-auto dark:hidden"
+            />
+            <Image
+              src="/samsbpm-lockup-dark.svg"
+              alt="samsbpm – small business, big tools"
+              width={200}
+              height={55}
+              priority
+              className="h-11 w-auto hidden dark:block"
             />
           </Link>
 

@@ -31,7 +31,14 @@ export default function Footer() {
                 alt="samsbpm – small business, big tools"
                 width={160}
                 height={44}
-                className="h-10 w-auto"
+                className="h-10 w-auto dark:hidden"
+              />
+              <Image
+                src="/samsbpm-lockup-dark.svg"
+                alt="samsbpm – small business, big tools"
+                width={160}
+                height={44}
+                className="h-10 w-auto hidden dark:block"
               />
             </div>
             <p className="text-[var(--muted-foreground)] text-sm leading-relaxed mb-4 max-w-[200px]">

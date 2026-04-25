@@ -42,16 +42,19 @@ export default function Contact() {
   const onSubmit = async (data: ContactForm) => {
     setSubmitting(true)
     try {
-      await fetch('/api/contact', {
+      const res = await fetch('https://formsubmit.co/ajax/contact@samsbpm.ca', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          ...data,
+          _subject: `New demo request from ${data.name}${data.company ? ` — ${data.company}` : ''}`,
+        }),
       })
+      if (!res.ok) throw new Error('Submission failed')
       setSubmitted(true)
       reset()
     } catch {
-      // still show success for demo purposes
-      setSubmitted(true)
+      alert('Something went wrong. Please email us directly at contact@samsbpm.ca')
     } finally {
       setSubmitting(false)
     }

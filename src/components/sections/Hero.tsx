@@ -24,23 +24,6 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Dark mode: radial gradient; light mode: soft gradient */}
-      <div className="absolute inset-0 bg-gradient-hero dark:opacity-100 opacity-0 transition-opacity duration-500" />
-      <div className="absolute inset-0 dark:opacity-0 opacity-100 bg-gradient-to-b from-orange-50 via-white to-white transition-opacity duration-500" />
-
-      {/* Decorative orbs */}
-      <div
-        aria-hidden
-        className="absolute top-1/4 -left-32 w-96 h-96 rounded-full bg-brand-600 opacity-20 blur-3xl animate-pulse-slow"
-      />
-      <div
-        aria-hidden
-        className="absolute bottom-1/4 -right-32 w-80 h-80 rounded-full bg-accent-500 opacity-15 blur-3xl animate-pulse-slow [animation-delay:2s]"
-      />
-      <div
-        aria-hidden
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-brand-800 opacity-10 blur-3xl animate-pulse-slow [animation-delay:4s]"
-      />
 
       {/* Content */}
       <motion.div
