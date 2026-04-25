@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Portfolio Hosting — SAMSBPM Technologies Inc.</title>
+<meta name="description" content="Portfolio Hosting: Editable portfolio sites powered by a real backend. Add projects, swap images, publish in real time — no Git, no terminal." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --accent: #F97316;
+  --accent-soft: rgba(249,115,22,0.12);
+  --accent-strong: #EA580C;
+  --bg: #FAFAF8;
+  --bg-elev: #FFFFFF;
+  --bg-elev-2: #F5F4F1;
+  --line: rgba(40,32,12,0.09);
+  --line-strong: rgba(40,32,12,0.16);
+  --ink: #1C1917;
+  --ink-dim: #57534E;
+  --ink-mute: #A8A29E;
+  --shadow-sm: 0 2px 8px -3px rgba(50,30,10,0.12);
+  --radius: 18px;
+  --radius-lg: 28px;
+  --radius-xl: 40px;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif; background: var(--bg); color: var(--ink); font-size: 16px; line-height: 1.55; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+.container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 28px; }
+
+.nav-wrap { position: sticky; top: 0; z-index: 40; padding: 14px 0; transition: background .3s, border-color .3s; }
+.nav-wrap.scrolled { background: rgba(250,250,248,0.82); backdrop-filter: saturate(160%) blur(14px); -webkit-backdrop-filter: saturate(160%) blur(14px); border-bottom: 1px solid var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.logo-text { font-weight: 800; font-size: 19px; letter-spacing: -0.025em; color: var(--ink); }
+.logo-text span { color: #F97316; }
+.nav-back { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 500; color: var(--ink-dim); padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--bg-elev); transition: color .2s, border-color .2s; }
+.nav-back:hover { color: var(--ink); border-color: var(--line-strong); }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px; border-radius: 999px; font-weight: 600; font-size: 14px; transition: transform .15s, box-shadow .2s, background .2s; white-space: nowrap; cursor: pointer; }
+.btn:active { transform: translateY(1px); }
+.btn-primary { background: var(--accent); color: white; box-shadow: 0 8px 28px -10px rgba(249,115,22,0.5), inset 0 1px 0 rgba(255,255,255,0.25); }
+.btn-primary:hover { background: var(--accent-strong); }
+.btn-ghost { background: transparent; color: var(--ink); border: 1px solid var(--line-strong); }
+.btn-ghost:hover { background: var(--bg-elev); }
+.btn-sm { padding: 9px 16px; font-size: 13px; }
+
+.hero { position: relative; padding: 72px 0 96px; overflow: hidden; isolation: isolate; text-align: center; }
+.hero-mesh { position: absolute; inset: 0; z-index: -1; pointer-events: none; background: radial-gradient(65% 55% at 50% 0%, rgba(249,115,22,0.13) 0%, transparent 70%), radial-gradient(40% 40% at 80% 80%, rgba(249,115,22,0.07) 0%, transparent 60%); }
+.hero-grid { position: absolute; inset: 0; z-index: -1; pointer-events: none; background-image: linear-gradient(to right, var(--line) 1px, transparent 1px), linear-gradient(to bottom, var(--line) 1px, transparent 1px); background-size: 64px 64px; mask-image: radial-gradient(ellipse 80% 70% at 50% 30%, #000 30%, transparent 75%); -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 30%, #000 30%, transparent 75%); opacity: 0.5; }
+
+.eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px 6px 8px; border-radius: 999px; background: var(--bg-elev); border: 1px solid var(--line); font-size: 13px; color: var(--ink-dim); margin-bottom: 28px; }
+.eyebrow-dot { width: 22px; height: 22px; border-radius: 999px; background: var(--accent-soft); display: grid; place-items: center; flex-shrink: 0; }
+.eyebrow-dot::before { content: ""; width: 7px; height: 7px; border-radius: 999px; background: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100% { box-shadow: 0 0 0 4px var(--accent-soft); } 50% { box-shadow: 0 0 0 8px transparent; } }
+
+.hero-tag { display: inline-block; padding: 3px 12px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; margin-bottom: 18px; }
+h1.hero-title { font-size: clamp(42px, 6.5vw, 80px); line-height: 1.0; letter-spacing: -0.04em; font-weight: 800; margin: 0 0 20px; text-wrap: balance; max-width: 860px; margin-left: auto; margin-right: auto; }
+.hero-tagline { font-size: clamp(17px, 1.8vw, 22px); color: var(--accent); font-weight: 600; margin: 0 0 16px; }
+.hero-desc { font-size: clamp(15px, 1.4vw, 18px); color: var(--ink-dim); max-width: 600px; margin: 0 auto 36px; line-height: 1.65; }
+.hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+section { scroll-margin-top: 80px; }
+.section { padding: 88px 0; }
+.section-head { text-align: center; max-width: 640px; margin: 0 auto 52px; }
+.section-eyebrow { display: inline-block; padding: 4px 12px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 14px; }
+h2.section-title { font-size: clamp(28px, 4vw, 44px); line-height: 1.06; letter-spacing: -0.03em; font-weight: 800; margin: 0 0 14px; text-wrap: balance; }
+.section-sub { font-size: 16px; color: var(--ink-dim); margin: 0; }
+
+.flow-section { background: var(--bg-elev-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.flow-row { display: flex; align-items: flex-start; justify-content: center; gap: 0; overflow-x: auto; padding: 8px 0 4px; }
+.flow-node { display: flex; flex-direction: column; align-items: center; gap: 10px; min-width: 110px; flex-shrink: 0; }
+.flow-bubble { width: 56px; height: 56px; border-radius: 50%; background: var(--bg-elev); border: 2px solid var(--accent); display: grid; place-items: center; font-size: 22px; box-shadow: 0 4px 16px -6px rgba(249,115,22,0.3); transition: transform .2s; }
+.flow-bubble:hover { transform: translateY(-3px); }
+.flow-label { font-size: 12px; font-weight: 600; color: var(--ink-dim); text-align: center; max-width: 96px; line-height: 1.35; }
+.flow-arrow { display: flex; align-items: center; color: var(--accent); opacity: 0.5; flex-shrink: 0; padding-top: 18px; font-size: 18px; margin: 0 4px; }
+
+.features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+@media (max-width: 900px) { .features-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .features-grid { grid-template-columns: 1fr; } }
+.feature-card { padding: 26px; border-radius: var(--radius); background: var(--bg-elev); border: 1px solid var(--line); transition: border-color .2s, box-shadow .2s; }
+.feature-card:hover { border-color: var(--line-strong); box-shadow: var(--shadow-sm); }
+.feature-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); margin-bottom: 10px; }
+.feature-card h3 { margin: 0 0 5px; font-size: 15px; font-weight: 700; }
+.feature-card p { margin: 0; font-size: 13px; color: var(--ink-dim); line-height: 1.5; }
+
+.for-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+@media (max-width: 760px) { .for-grid { grid-template-columns: 1fr; } }
+.for-card { padding: 28px; border-radius: var(--radius); background: var(--bg-elev); border: 1px solid var(--line); }
+.for-number { width: 32px; height: 32px; border-radius: 10px; background: var(--accent-soft); color: var(--accent); display: grid; place-items: center; font-weight: 800; font-size: 14px; margin-bottom: 12px; }
+.for-card h3 { margin: 0 0 6px; font-size: 15px; font-weight: 700; }
+.for-card p { margin: 0; font-size: 13px; color: var(--ink-dim); line-height: 1.5; }
+
+.cta-strip { margin: 0 auto; padding: 60px 48px; border-radius: var(--radius-xl); background: radial-gradient(100% 80% at 10% 0%, oklch(0.72 0.18 45) 0%, transparent 60%), radial-gradient(100% 80% at 100% 100%, oklch(0.6 0.18 35) 0%, transparent 60%), var(--bg-elev-2); border: 1px solid var(--line); text-align: center; overflow: hidden; position: relative; }
+.cta-strip::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(249,115,22,0.18), transparent 70%); pointer-events: none; }
+.cta-strip h2 { font-size: clamp(26px, 3.5vw, 40px); letter-spacing: -0.025em; margin: 0 0 12px; color: white; font-weight: 800; position: relative; }
+.cta-strip p { color: rgba(255,255,255,0.85); margin: 0 0 28px; font-size: 16px; position: relative; }
+.btn-light { background: white; color: var(--accent-strong); font-weight: 700; position: relative; }
+.btn-light:hover { background: #FFF7ED; }
+
+footer { padding: 64px 0 36px; border-top: 1px solid var(--line); margin-top: 40px; }
+.footer-inner { display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; flex-wrap: wrap; margin-bottom: 40px; }
+.footer-brand h3 { font-size: 18px; font-weight: 800; letter-spacing: -0.025em; margin: 0 0 8px; }
+.footer-brand h3 span { color: #F97316; }
+.footer-brand p { font-size: 13px; color: var(--ink-mute); margin: 0; max-width: 260px; }
+.footer-links { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
+.footer-links a { font-size: 13px; color: var(--ink-dim); transition: color .2s; }
+.footer-links a:hover { color: var(--ink); }
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; border-top: 1px solid var(--line); font-size: 12px; color: var(--ink-mute); flex-wrap: wrap; gap: 10px; }
+
+@media (max-width: 640px) { .hero { padding: 52px 0 72px; } .section { padding: 60px 0; } .cta-strip { padding: 44px 24px; } }
+</style>
+</head>
+<body>
+
+<div class="nav-wrap" id="navbar">
+  <div class="container">
+    <nav class="nav">
+      <a href="index.html"><span class="logo-text">samsbpm<span>.</span></span></a>
+      <a href="index.html" class="nav-back">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        Back to samsbpm.ca
+      </a>
+      <a href="index.html#contact" class="btn btn-primary btn-sm">Contact us</a>
+    </nav>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-mesh"></div>
+  <div class="container">
+    <div style="text-align:center; max-width:860px; margin:0 auto;">
+      <div class="eyebrow">
+        <span class="eyebrow-dot"></span>
+        <span>Showcase Product</span>
+      </div>
+      <div class="hero-tag">Showcase</div>
+      <h1 class="hero-title">Portfolio Hosting</h1>
+      <p class="hero-tagline">Update your portfolio without redeploying.</p>
+      <p class="hero-desc">Editable portfolio sites powered by a real backend. Add projects, swap images, publish in real time — no Git, no terminal, no waiting for a developer.</p>
+      <div class="hero-actions">
+        <a href="index.html#contact" class="btn btn-primary">Get started →</a>
+        <a href="index.html#contact" class="btn btn-ghost">Contact us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section flow-section">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow">How it works</div>
+      <h2 class="section-title">Add a project. Publish. Done.</h2>
+      <p class="section-sub">No redeploy, no command line, no developer needed. Your portfolio updates the moment you click publish.</p>
+    </div>
+    <div class="flow-row">
+      <div class="flow-node">
+        <div class="flow-bubble">🗂️</div>
+        <div class="flow-label">Add projects in editor</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node">
+        <div class="flow-bubble">🖼️</div>
+        <div class="flow-label">Upload images &amp; media</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node">
+        <div class="flow-bubble">✍️</div>
+        <div class="flow-label">Write descriptions</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node">
+        <div class="flow-bubble">👁️</div>
+        <div class="flow-label">Preview changes</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node">
+        <div class="flow-bubble">🌐</div>
+        <div class="flow-label">Publish in real time</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow">Key Features</div>
+      <h2 class="section-title">A portfolio that's actually yours to manage</h2>
+      <p class="section-sub">Backend-powered means you control your content — add projects, update descriptions, swap images any time you want.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-dot"></div>
+        <h3>Backend-powered</h3>
+        <p>No static site generator, no redeploy required. Changes go live immediately through the backend.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-dot"></div>
+        <h3>Add/remove projects anytime</h3>
+        <p>Your portfolio is always up to date — add new work, archive old projects, in seconds.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-dot"></div>
+        <h3>Custom domain support</h3>
+        <p>Use your own domain name so your portfolio lives at yourname.com, not someone else's subdomain.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-dot"></div>
+        <h3>Clean professional themes</h3>
+        <p>Minimal, typographically-strong themes that let your work take center stage.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-dot"></div>
+        <h3>Image optimization</h3>
+        <p>Images are automatically compressed and served in modern formats so your site loads fast.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-dot"></div>
+        <h3>Ideal for freelancers &amp; agencies</h3>
+        <p>Show clients your latest work without emailing them PDFs or waiting for a rebuild.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background: var(--bg-elev-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow">Who it's for</div>
+      <h2 class="section-title">For creatives who own their brand</h2>
+      <p class="section-sub">If you've ever waited for a developer to update your portfolio, those days are over.</p>
+    </div>
+    <div class="for-grid">
+      <div class="for-card">
+        <div class="for-number">1</div>
+        <h3>Freelancers</h3>
+        <p>Show your latest work the moment a project is done — no rebuild, no waiting, just publish.</p>
+      </div>
+      <div class="for-card">
+        <div class="for-number">2</div>
+        <h3>Creative agencies</h3>
+        <p>Manage multiple client-facing portfolios from one place, each with its own domain and brand.</p>
+      </div>
+      <div class="for-card">
+        <div class="for-number">3</div>
+        <h3>Professionals</h3>
+        <p>Designers, photographers, architects — anyone who wants a portfolio they can control themselves.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-strip">
+      <h2>Ready to get started?</h2>
+      <p>Contact our team and your portfolio will be live and editable today.</p>
+      <a href="index.html#contact" class="btn btn-light">Contact our team →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h3>samsbpm<span>.</span></h3>
+        <p>SAMSBPM Technologies Inc. — smart software for small businesses. Made in Canada.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html#contact">Privacy Policy</a>
+        <a href="index.html#contact">Terms</a>
+        <a href="index.html">samsbpm.ca</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 SAMSBPM Technologies Inc. Made in Canada 🍁</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;">Portfolio Hosting · Showcase</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav = document.getElementById('navbar');
+window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 16); });
+</script>
+</body>
+</html>
