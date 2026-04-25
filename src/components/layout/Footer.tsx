@@ -1,4 +1,6 @@
-import { Cpu, Mail } from 'lucide-react'
+import Image from 'next/image'
+import Link from 'next/link'
+import { Mail } from 'lucide-react'
 import { PRODUCTS, COMPANY_INFO } from '@/lib/constants'
 
 const productLinks = PRODUCTS.slice(0, 5).map((p) => ({
@@ -23,11 +25,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand column */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-gradient-brand flex items-center justify-center">
-                <Cpu size={16} className="text-white" />
-              </div>
-              <span className="font-display font-bold text-[var(--foreground)]">SAMSBPM</span>
+            <div className="mb-4">
+              <Image
+                src="/samsbpm-lockup.svg"
+                alt="samsbpm – small business, big tools"
+                width={160}
+                height={44}
+                className="h-10 w-auto"
+              />
             </div>
             <p className="text-[var(--muted-foreground)] text-sm leading-relaxed mb-4 max-w-[200px]">
               {COMPANY_INFO.tagline}
@@ -125,8 +130,8 @@ export default function Footer() {
             © {year} SAMSBPM Technologies Inc. 🇨🇦 All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <span className="text-sm text-[var(--muted-foreground)]">Privacy Policy</span>
-            <span className="text-sm text-[var(--muted-foreground)]">Terms of Service</span>
+            <Link href="/privacy" className="text-sm text-[var(--muted-foreground)] hover:text-brand-500 transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="text-sm text-[var(--muted-foreground)] hover:text-brand-500 transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>

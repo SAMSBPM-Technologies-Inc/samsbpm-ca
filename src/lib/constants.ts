@@ -20,6 +20,14 @@ export const PRODUCTS: Product[] = [
     gradient: 'from-emerald-500 to-green-600',
     badge: 'AI-Powered',
     badgeColor: 'emerald',
+    features: [
+      'WhatsApp, Messenger & Email order intake',
+      'AI-powered message parsing',
+      'Real-time order creation in your backend',
+      'Inventory validation & stock checks',
+      'Automated order confirmation notifications',
+      'Daily summary reports & analytics',
+    ],
   },
   {
     id: 'api-vedoryx',
@@ -31,6 +39,14 @@ export const PRODUCTS: Product[] = [
     gradient: 'from-blue-500 to-cyan-600',
     badge: 'Platform',
     badgeColor: 'blue',
+    features: [
+      'Multi-tenant architecture',
+      'Intelligent rate limiting & versioning',
+      'Auto-generated API documentation',
+      'Webhook support & event streaming',
+      'Role-based access control',
+      '99.9% uptime SLA',
+    ],
   },
   {
     id: 'dashboard-vedoryx',
@@ -42,6 +58,14 @@ export const PRODUCTS: Product[] = [
     gradient: 'from-orange-500 to-amber-600',
     badge: 'Analytics',
     badgeColor: 'orange',
+    features: [
+      'Real-time analytics & live order tracking',
+      'User & role management',
+      'Product catalog control',
+      'Custom reports & data exports',
+      'White-label ready',
+      'Mobile-responsive interface',
+    ],
   },
   {
     id: 'ecommerce-frontend',
@@ -53,6 +77,14 @@ export const PRODUCTS: Product[] = [
     gradient: 'from-orange-500 to-amber-600',
     badge: 'eCommerce',
     badgeColor: 'orange',
+    features: [
+      'Conversion-optimized templates',
+      'Product catalog & shopping cart',
+      'Payment gateway integrations',
+      'Mobile-first, SEO-ready design',
+      'Order confirmation emails',
+      'Inventory management',
+    ],
   },
   {
     id: 'website-builder',
@@ -64,6 +96,14 @@ export const PRODUCTS: Product[] = [
     gradient: 'from-pink-500 to-rose-600',
     badge: 'No-Code',
     badgeColor: 'pink',
+    features: [
+      'No-code drag-and-drop editor',
+      'Templates for temples, non-profits & clinics',
+      'Event calendar support',
+      'Donation & contact links',
+      'Fast-loading static pages',
+      'Custom domain support',
+    ],
   },
   {
     id: 'rental-management',
@@ -75,6 +115,14 @@ export const PRODUCTS: Product[] = [
     gradient: 'from-teal-500 to-cyan-600',
     badge: 'Management',
     badgeColor: 'teal',
+    features: [
+      'Real-time availability calendar',
+      'Automated booking confirmations',
+      'Double-booking prevention',
+      'SMS & Email notifications',
+      'Revenue reports',
+      'Customer booking history',
+    ],
   },
   {
     id: 'portfolio-hosting',
@@ -86,6 +134,14 @@ export const PRODUCTS: Product[] = [
     gradient: 'from-indigo-500 to-blue-600',
     badge: 'Hosting',
     badgeColor: 'indigo',
+    features: [
+      'Real-time portfolio editing via dashboard',
+      'Project showcase grid',
+      'Skills & experience sections',
+      'Custom domain support',
+      'No redeploy needed for updates',
+      'Built-in analytics',
+    ],
   },
 ]
 

@@ -7,6 +7,7 @@ export interface Product {
   gradient: string
   badge: string
   badgeColor: string
+  features: string[]
 }
 
 export interface NavLink {
