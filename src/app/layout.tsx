@@ -48,6 +48,13 @@ export const metadata: Metadata = {
     title: 'SAMSBPM Technologies Inc.',
     description: 'Canadian SaaS & automation solutions for modern businesses.',
   },
+  icons: {
+    icon: [
+      { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icon-512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: '/apple-icon.png',
+  },
   robots: {
     index: true,
     follow: true,

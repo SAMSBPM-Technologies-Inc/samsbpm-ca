@@ -1,7 +1,8 @@
 'use client'
 import { useState } from 'react'
 import Link from 'next/link'
-import { Menu, X, Cpu } from 'lucide-react'
+import Image from 'next/image'
+import { Menu, X } from 'lucide-react'
 import { useScrolled } from '@/hooks/useScrolled'
 import { Button } from '@/components/ui/Button'
 import { ThemeToggle } from '@/components/ui/ThemeToggle'
@@ -34,18 +35,17 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center gap-2.5 group focus-visible:outline-none"
+            className="flex items-center group focus-visible:outline-none"
             aria-label="SAMSBPM Technologies homepage"
           >
-            <div className="w-8 h-8 rounded-lg bg-gradient-brand flex items-center justify-center shadow-brand-sm group-hover:shadow-brand-md transition-shadow">
-              <Cpu size={16} className="text-white" />
-            </div>
-            <span className="font-display font-bold text-lg text-[var(--foreground)] hidden sm:block">
-              SAMSBPM
-            </span>
-            <span className="hidden lg:block text-xs text-[var(--muted-foreground)] -mt-0.5">
-              Technologies Inc.
-            </span>
+            <Image
+              src="/samsbpm-lockup.svg"
+              alt="samsbpm – small business, big tools"
+              width={200}
+              height={55}
+              priority
+              className="h-11 w-auto"
+            />
           </Link>
 
           {/* Desktop Nav */}

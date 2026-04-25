@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="512" height="512" role="img" aria-label="samsbpm sprout mark, monochrome">
+  
+  <g fill="currentColor" stroke="currentColor">
+    <ellipse cx="22" cy="37" rx="12" ry="1.6" fill-opacity="0.18" stroke="none"></ellipse>
+    <path d="M22 37 Q22 28 22 21 Q22 15 22 10" stroke-width="2.8" stroke-linecap="round" fill="none"></path>
+    <path d="M22 25 C 14 24, 10 28, 11 31 C 16 32, 22 30, 22 25 Z" stroke="none"></path>
+    <path d="M22 18 C 32 16, 36 20, 35 24 C 28 26, 22 23, 22 18 Z" fill-opacity="0.75" stroke="none"></path>
+    <circle cx="22" cy="10" r="2.2" stroke="none"></circle>
+  </g>
+</svg>
