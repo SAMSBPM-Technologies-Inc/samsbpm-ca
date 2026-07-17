@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import {
   MessageSquare, Layers, BarChart3, ShoppingCart,
   Globe, Calendar, Layout, ArrowRight, X,
+  Receipt, Repeat,
   LucideIcon,
 } from 'lucide-react'
 import { AnimateInView } from '@/components/ui/AnimateInView'
@@ -22,6 +23,8 @@ const iconMap: Record<string, LucideIcon> = {
   Globe,
   Calendar,
   Layout,
+  Receipt,
+  Repeat,
 }
 
 type BadgeColor = React.ComponentProps<typeof Badge>['color']

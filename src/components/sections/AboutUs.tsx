@@ -58,6 +58,8 @@ export default function AboutUs() {
                       { icon: '🛍️', label: 'eCommerce',         desc: 'Store Templates',           color: 'orange'  },
                       { icon: '🏠', label: 'Rental RMS',        desc: 'Availability & Bookings',   color: 'teal'    },
                       { icon: '💼', label: 'Portfolio Platform', desc: 'Real-time Portfolios',     color: 'indigo'  },
+                      { icon: '🧾', label: 'BillBridge',        desc: 'Invoice Management',        color: 'violet'  },
+                      { icon: '🔄', label: 'ServStack',         desc: 'Subscription Services',     color: 'cyan'    },
                     ].map((item) => (
                       <div
                         key={item.label}
@@ -79,7 +81,7 @@ export default function AboutUs() {
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                   <span className="text-sm font-medium text-[var(--foreground)]">
-                    7 Products Active
+                    9 Products Active
                   </span>
                 </div>
               </div>

@@ -143,6 +143,44 @@ export const PRODUCTS: Product[] = [
       'Built-in analytics',
     ],
   },
+  {
+    id: 'billbridge',
+    name: 'BillBridge',
+    tagline: 'Professional invoicing for consulting firms — multi-tenant & automated.',
+    description:
+      'BillBridge is a multi-tenant invoice management SaaS built for consulting businesses. Create, send, and track professional invoices with automated tenant provisioning, Stripe payment tracking, and role-based access — all at billbridge.ca.',
+    icon: 'Receipt',
+    gradient: 'from-violet-500 to-purple-600',
+    badge: 'Invoicing',
+    badgeColor: 'violet',
+    features: [
+      'Multi-tenant architecture with isolated firm data',
+      'Professional invoice creation & delivery',
+      'Stripe payment integration & billing records',
+      'Role-based access control (admin / staff)',
+      'Automated tenant provisioning via Platform API',
+      'Real-time dashboard & financial reporting',
+    ],
+  },
+  {
+    id: 'servstack',
+    name: 'ServStack',
+    tagline: 'Subscription plans for recurring-service businesses.',
+    description:
+      'ServStack is a multi-vendor SaaS platform for recurring-service businesses — meal delivery, cleaning, lawn care, and more. Sell fixed or fully configurable subscription plans directly to customers, with Stripe checkout and an analytics dashboard at servstack.ca.',
+    icon: 'Repeat',
+    gradient: 'from-cyan-500 to-sky-600',
+    badge: 'Subscriptions',
+    badgeColor: 'cyan',
+    features: [
+      'Fixed & configurable subscription plan builder',
+      'Multi-vendor / multi-tenant architecture',
+      'Stripe Checkout for subscription payments',
+      'Customer self-serve portal per vendor',
+      'Pause, cancel & skip subscription controls',
+      'Revenue reports & subscription analytics',
+    ],
+  },
 ]
 
 export const HOW_IT_WORKS_STEPS: Step[] = [
