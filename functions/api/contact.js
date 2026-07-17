@@ -33,7 +33,7 @@ export async function onRequestPost(context) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'SAMSBPM Contact Form <noreply@samsbpm.ca>',
+        from: 'SAMSBPM Contact Form <noreply@samsbpm.com>',
         to: ['contact@samsbpm.com'],
         reply_to: email,
         subject,
