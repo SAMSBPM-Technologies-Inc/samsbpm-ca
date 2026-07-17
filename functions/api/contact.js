@@ -34,7 +34,7 @@ export async function onRequestPost(context) {
       },
       body: JSON.stringify({
         from: 'SAMSBPM Contact Form <noreply@samsbpm.ca>',
-        to: ['contact@samsbpm.ca'],
+        to: ['contact@samsbpm.com'],
         reply_to: email,
         subject,
         html,

@@ -296,7 +296,7 @@ export const COMPANY_INFO = {
   name: 'SAMSBPM Technologies Inc.',
   tagline: 'Built in Canada. Built for Growth.',
   address: 'Canada',
-  email: 'contact@samsbpm.ca',
+  email: 'contact@samsbpm.com',
   phone: '+1 (xxx) xxx-xxxx',
   socials: {
     linkedin: 'https://linkedin.com/company/samsbpm',

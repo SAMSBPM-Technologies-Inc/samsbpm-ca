@@ -51,7 +51,7 @@ export default function Contact() {
       setSubmitted(true)
       reset()
     } catch {
-      alert('Something went wrong. Please email us directly at contact@samsbpm.ca')
+      alert('Something went wrong. Please email us directly at contact@samsbpm.com')
     } finally {
       setSubmitting(false)
     }

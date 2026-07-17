@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const EFFECTIVE_DATE = 'April 24, 2026'
 const COMPANY = 'SAMSBPM Technologies Inc.'
-const EMAIL = 'contact@samsbpm.ca'
+const EMAIL = 'contact@samsbpm.com'
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
