@@ -28,6 +28,12 @@ export const PRODUCTS: Product[] = [
       'Automated order confirmation notifications',
       'Daily summary reports & analytics',
     ],
+    seoTitle: 'AutoOrderSync — WhatsApp & Messenger Order Automation Software Canada',
+    seoDescription: 'AutoOrderSync by SAMSBPM automatically captures customer orders from WhatsApp, Messenger, and Email — validating, creating, and confirming them in your backend instantly. Built for Canadian small businesses.',
+    keywords: ['WhatsApp order automation Canada', 'Messenger order management software', 'automated order processing Canada', 'AI order intake software', 'WhatsApp business order system', 'order automation for small business Canada'],
+    longDescription: 'AutoOrderSync eliminates the manual work of processing customer orders received through messaging channels. Whether your customers place orders via WhatsApp, Facebook Messenger, or email, AutoOrderSync uses AI-powered message parsing to extract order details, validate inventory, create the order in your backend system, and send automated confirmation notifications — all in seconds. Canadian businesses in food, produce, retail, and wholesale use AutoOrderSync to reduce order processing time by up to 80% and eliminate costly errors.',
+    targetAudience: 'Small and medium businesses in Canada that receive customer orders via WhatsApp, Messenger, or email — including food vendors, grocery stores, produce distributors, and retail businesses.',
+    useCases: ['Mango and produce vendors receiving WhatsApp orders', 'Grocery stores managing email order lists', 'Wholesale distributors processing Messenger orders', 'Food businesses automating order confirmation workflows'],
   },
   {
     id: 'api-vedoryx',
@@ -47,6 +53,12 @@ export const PRODUCTS: Product[] = [
       'Role-based access control',
       '99.9% uptime SLA',
     ],
+    seoTitle: 'Vedoryx-API — Multi-Tenant Backend API Platform for Canadian Businesses',
+    seoDescription: 'Vedoryx-API is a scalable, multi-tenant API platform by SAMSBPM Technologies. Deploy enterprise-grade APIs with rate limiting, versioning, webhooks, and auto-generated documentation. Built for Canadian SaaS companies.',
+    keywords: ['multi-tenant API platform Canada', 'backend API development Canada', 'SaaS API infrastructure', 'API management platform Canada', 'scalable API platform small business', 'Canadian API hosting'],
+    longDescription: 'Vedoryx-API gives Canadian businesses and developers a production-ready API backbone without the infrastructure overhead. Supporting multi-tenant architectures, it lets multiple businesses share a single deployment while keeping data completely isolated. Intelligent rate limiting protects your API from abuse, automatic versioning ensures backwards compatibility, and auto-generated documentation keeps developers productive. Webhook support and event streaming make real-time integrations with third-party tools simple.',
+    targetAudience: 'Canadian SaaS companies, development agencies, and businesses needing a scalable, multi-tenant backend API platform.',
+    useCases: ['SaaS startups needing a multi-tenant API backbone', 'Agencies building client-facing API products', 'Businesses integrating WhatsApp, Stripe, and Shopify workflows', 'Enterprises requiring role-based access and 99.9% uptime'],
   },
   {
     id: 'dashboard-vedoryx',
@@ -66,6 +78,12 @@ export const PRODUCTS: Product[] = [
       'White-label ready',
       'Mobile-responsive interface',
     ],
+    seoTitle: 'Vedoryx-Dashboard — Business Analytics & Admin Dashboard Software Canada',
+    seoDescription: 'Vedoryx-Dashboard by SAMSBPM is a unified, role-based admin dashboard for Canadian businesses. Monitor real-time orders, manage users, control product catalogs, and export custom reports — all from one interface.',
+    keywords: ['business admin dashboard Canada', 'operations analytics software Canada', 'real-time order tracking dashboard', 'business intelligence dashboard small business', 'white-label admin dashboard Canada', 'SaaS admin panel Canada'],
+    longDescription: 'Vedoryx-Dashboard gives business owners and operations teams a single pane of glass to run their entire operation. Track live orders as they come in, manage your team with granular role-based access, update your product catalog without developer help, and pull custom reports for any date range. Designed to be white-label ready, it can be branded for your business and accessed on any device. Whether you run a single store or manage multiple locations, Vedoryx-Dashboard scales with you.',
+    targetAudience: 'Business owners, operations managers, and teams in Canada who need a centralized dashboard to manage orders, users, products, and analytics.',
+    useCases: ['eCommerce businesses tracking live orders', 'Multi-location businesses managing central operations', 'Managers needing role-based team access controls', 'Business owners wanting daily and weekly performance reports'],
   },
   {
     id: 'ecommerce-frontend',
@@ -85,6 +103,12 @@ export const PRODUCTS: Product[] = [
       'Order confirmation emails',
       'Inventory management',
     ],
+    seoTitle: 'eCommerce Frontend — Online Store Builder for Canadian Small Businesses',
+    seoDescription: 'Launch a professional online store in hours with SAMSBPM\'s eCommerce Frontend. Conversion-optimized templates, shopping cart, Stripe & payment gateway integrations, and mobile-first SEO-ready design for Canadian small businesses.',
+    keywords: ['eCommerce website builder Canada', 'online store for small business Canada', 'Canadian eCommerce solution', 'launch online store Canada', 'eCommerce templates Canada', 'small business online shop Canada', 'Stripe eCommerce Canada'],
+    longDescription: 'SAMSBPM\'s eCommerce Frontend gets Canadian small businesses selling online fast. Choose from conversion-optimized templates designed for your industry, add your products with our intuitive catalog manager, and connect your preferred payment gateway — Stripe, PayPal, or others — in minutes. Every storefront is built mobile-first and SEO-ready so customers can find you on Google. Automated order confirmation emails keep customers informed, and built-in inventory management prevents overselling.',
+    targetAudience: 'Canadian small and medium businesses looking to launch or upgrade their online store quickly without large development costs.',
+    useCases: ['Local retailers launching their first online store', 'Food vendors selling products online', 'Small businesses migrating from Shopify to a custom storefront', 'Wholesale businesses building a B2B ordering portal'],
   },
   {
     id: 'website-builder',
@@ -104,6 +128,12 @@ export const PRODUCTS: Product[] = [
       'Fast-loading static pages',
       'Custom domain support',
     ],
+    seoTitle: 'Simple Website Builder — No-Code Websites for Temples, Clinics & Non-Profits Canada',
+    seoDescription: 'SAMSBPM\'s Simple Website Builder creates beautiful, fast-loading websites for Canadian temples, non-profits, clinics, and local businesses — no coding required. Includes event calendars, donation links, and custom domain support.',
+    keywords: ['website builder for temples Canada', 'non-profit website builder Canada', 'clinic website builder Canada', 'no-code website for local business Canada', 'simple website builder Canada', 'community organization website Canada', 'temple website design Canada'],
+    longDescription: 'Not every organization needs a complex website — they just need a beautiful, fast, and easy-to-update one. SAMSBPM\'s Simple Website Builder is purpose-built for Canadian temples, non-profit organizations, medical clinics, and local community businesses. Choose from professionally designed templates for your type of organization, add your events calendar, set up donation or contact links, and go live on your custom domain — all without writing a single line of code. Pages load fast on any device and are optimized for local search.',
+    targetAudience: 'Canadian temples, non-profit organizations, medical clinics, community groups, and local businesses that need a simple, professional web presence without technical complexity.',
+    useCases: ['Hindu and Sikh temples publishing event schedules and donation links', 'Non-profits sharing their mission and accepting online donations', 'Clinics publishing hours, services, and appointment contact info', 'Local businesses establishing a professional web presence'],
   },
   {
     id: 'rental-management',
@@ -123,6 +153,12 @@ export const PRODUCTS: Product[] = [
       'Revenue reports',
       'Customer booking history',
     ],
+    seoTitle: 'Rental Management System — Booking & Availability Software for Canadian Rental Businesses',
+    seoDescription: 'SAMSBPM\'s Rental Management System helps Canadian rental businesses manage bookings, availability calendars, automated confirmations, and revenue reports. Prevent double-bookings with real-time availability tracking.',
+    keywords: ['rental management software Canada', 'property booking system Canada', 'rental availability calendar software', 'booking management software Canada', 'equipment rental software Canada', 'rental business software Canada', 'automated booking confirmations Canada'],
+    longDescription: 'Running a rental business without the right tools means constant double-booking risks, missed confirmations, and hours spent on manual tracking. SAMSBPM\'s Rental Management System gives Canadian rental businesses a real-time availability calendar that updates instantly when bookings are made, preventing double-bookings entirely. Automated SMS and email notifications keep customers informed at every step. Revenue reports help you understand your most profitable periods, and a complete customer booking history makes managing repeat clients easy.',
+    targetAudience: 'Canadian rental businesses including equipment rentals, property rentals, vehicle rentals, party supply rentals, and any business managing bookable inventory.',
+    useCases: ['Equipment rental companies managing availability across multiple items', 'Property managers handling short and long-term bookings', 'Party supply businesses tracking availability and deliveries', 'Vehicle rental companies preventing double-bookings'],
   },
   {
     id: 'portfolio-hosting',
@@ -142,6 +178,12 @@ export const PRODUCTS: Product[] = [
       'No redeploy needed for updates',
       'Built-in analytics',
     ],
+    seoTitle: 'Portfolio Hosting Platform — Real-Time Editable Portfolios for Professionals Canada',
+    seoDescription: 'Host and update your professional portfolio in real time with SAMSBPM\'s Portfolio Hosting Platform. Edit projects, skills, and experience through a dashboard — no developers or redeploys needed. Custom domain support included.',
+    keywords: ['portfolio hosting Canada', 'professional portfolio website Canada', 'editable portfolio platform', 'portfolio builder for freelancers Canada', 'real-time portfolio editor', 'portfolio website for developers Canada', 'portfolio hosting with custom domain Canada'],
+    longDescription: 'Your portfolio should evolve as fast as your career does. SAMSBPM\'s Portfolio Hosting Platform lets Canadian freelancers, developers, designers, and creatives host a professional portfolio that they can update instantly through a backend dashboard — no code, no redeploys, no downtime. Add new projects, update your skills and experience, or change your bio and have it live within seconds. Built-in analytics show you who\'s visiting and which projects get the most attention. Connect your custom domain and present a professional image to every client.',
+    targetAudience: 'Canadian freelancers, developers, designers, photographers, and creative professionals who want a professional portfolio they can update without technical knowledge.',
+    useCases: ['Freelance developers showcasing project work to clients', 'Designers building a visual portfolio with project grids', 'Photographers displaying galleries with live updates', 'Job seekers maintaining an always-current professional profile'],
   },
   {
     id: 'billbridge',
@@ -161,6 +203,13 @@ export const PRODUCTS: Product[] = [
       'Automated tenant provisioning via Platform API',
       'Real-time dashboard & financial reporting',
     ],
+    seoTitle: 'BillBridge — Invoice Management Software for Canadian Consulting Firms',
+    seoDescription: 'BillBridge by SAMSBPM is a multi-tenant invoicing SaaS for Canadian consulting businesses. Create, send, and track professional invoices with Stripe payments, role-based access, and real-time financial reporting at billbridge.ca.',
+    keywords: ['invoice management software Canada', 'invoicing software for consulting firms Canada', 'multi-tenant invoicing SaaS', 'billing software for consultants Canada', 'professional invoice software Canada', 'Stripe invoicing Canada', 'invoice tracking software Canada'],
+    longDescription: 'BillBridge brings enterprise-grade invoice management to Canadian consulting firms of all sizes. Built on a secure multi-tenant architecture, each consulting firm gets completely isolated data and their own branded invoicing environment. Create professional invoices in seconds, deliver them to clients by email, and track payment status in real time. Stripe integration handles online payments seamlessly, and full billing records give you everything you need for accounting. Role-based access lets principals manage everything while staff handle day-to-day billing. Live at billbridge.ca.',
+    targetAudience: 'Canadian consulting firms, agencies, freelance consultants, and professional services businesses that need a streamlined, professional invoicing and billing system.',
+    useCases: ['IT consulting firms billing multiple clients monthly', 'Marketing agencies tracking invoices and payments', 'Independent consultants sending professional invoices', 'Professional services firms managing multi-staff billing workflows'],
+    productUrl: 'https://billbridge.ca',
   },
   {
     id: 'servstack',
@@ -180,6 +229,13 @@ export const PRODUCTS: Product[] = [
       'Pause, cancel & skip subscription controls',
       'Revenue reports & subscription analytics',
     ],
+    seoTitle: 'ServStack — Subscription Management Platform for Recurring Service Businesses Canada',
+    seoDescription: 'ServStack by SAMSBPM is a multi-vendor subscription management platform for Canadian recurring-service businesses. Sell meal delivery, cleaning, lawn care, and other subscription plans with Stripe payments and customer portals at servstack.ca.',
+    keywords: ['subscription management software Canada', 'recurring service business software Canada', 'meal delivery subscription platform Canada', 'cleaning service subscription software', 'subscription billing platform Canada', 'service subscription SaaS Canada', 'recurring revenue platform Canada'],
+    longDescription: 'ServStack is built for Canadian businesses that sell services on a recurring basis — meal delivery companies, cleaning services, lawn care providers, and more. Create flexible subscription plans that customers can browse and subscribe to through a self-serve portal branded to your business. Offer fixed bundle tiers or fully configurable plans where customers pick exactly what they need. Stripe Checkout handles all payments securely, and customers can pause, cancel, or modify their subscriptions on their own. Revenue reports and subscription analytics give you full visibility into churn, growth, and performance. Live at servstack.ca.',
+    targetAudience: 'Canadian businesses that sell recurring services including meal delivery, cleaning companies, lawn care, personal training, tutoring, and any service sold on a subscription basis.',
+    useCases: ['Meal delivery companies selling weekly meal plan subscriptions', 'Cleaning services offering recurring home cleaning packages', 'Lawn care businesses managing seasonal subscription customers', 'Personal trainers and fitness coaches selling monthly program subscriptions'],
+    productUrl: 'https://servstack.ca',
   },
 ]
 
@@ -289,6 +345,41 @@ export const INDUSTRIES: Industry[] = [
     icon: 'Palette',
     description: 'Portfolio hosting and real-time profile management',
     color: 'orange',
+  },
+]
+
+export const FAQS = [
+  {
+    question: 'What does SAMSBPM Technologies do?',
+    answer: 'SAMSBPM Technologies Inc. is a Canadian SaaS company that builds automation tools, API platforms, invoicing software, subscription management systems, eCommerce storefronts, and digital solutions for small and medium businesses across Canada.',
+  },
+  {
+    question: 'Can AutoOrderSync receive orders from WhatsApp?',
+    answer: 'Yes. AutoOrderSync automatically captures customer orders sent via WhatsApp, Facebook Messenger, or Email — parsing the message with AI, validating inventory, creating the order in your system, and sending a confirmation to the customer, all in seconds.',
+  },
+  {
+    question: 'What is BillBridge and who is it for?',
+    answer: 'BillBridge is a multi-tenant invoice management SaaS for Canadian consulting firms and professional services businesses. It lets you create, send, and track professional invoices with Stripe payment integration and role-based access for your team. Available at billbridge.ca.',
+  },
+  {
+    question: 'What is ServStack and how does it work?',
+    answer: 'ServStack is a subscription management platform for recurring-service businesses such as meal delivery, cleaning services, and lawn care. Businesses create subscription plans, customers subscribe through a self-serve portal, and Stripe handles all billing. Available at servstack.ca.',
+  },
+  {
+    question: 'Is SAMSBPM software PIPEDA-compliant?',
+    answer: 'Yes. All SAMSBPM products are built and hosted in Canada, designed to comply with PIPEDA (Canada\'s Personal Information Protection and Electronic Documents Act). Your data stays in Canada.',
+  },
+  {
+    question: 'How quickly can my business get started with a SAMSBPM product?',
+    answer: 'Most businesses are up and running within days, not months. Our team handles configuration, integration, and onboarding tailored to your workflows. Contact us for a free 30-minute discovery call.',
+  },
+  {
+    question: 'Do you offer custom software solutions?',
+    answer: 'Yes. In addition to our off-the-shelf products, SAMSBPM builds custom digital solutions. Contact us at contact@samsbpm.com to discuss your specific requirements.',
+  },
+  {
+    question: 'Which industries does SAMSBPM serve?',
+    answer: 'SAMSBPM serves retail & eCommerce, food & produce, real estate & rental, temples & non-profits, health & wellness, consulting & professional services, and freelancers & creatives across Canada.',
   },
 ]
 

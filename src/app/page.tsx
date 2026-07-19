@@ -4,6 +4,7 @@ import Products from '@/components/sections/Products'
 import HowItWorks from '@/components/sections/HowItWorks'
 import Features from '@/components/sections/Features'
 import Industries from '@/components/sections/Industries'
+import FAQ from '@/components/sections/FAQ'
 import Contact from '@/components/sections/Contact'
 
 export default function HomePage() {
@@ -15,6 +16,7 @@ export default function HomePage() {
       <HowItWorks />
       <Features />
       <Industries />
+      <FAQ />
       <Contact />
     </>
   )

@@ -8,6 +8,14 @@ export interface Product {
   badge: string
   badgeColor: string
   features: string[]
+  // SEO fields
+  seoTitle?: string
+  seoDescription?: string
+  keywords?: string[]
+  longDescription?: string
+  targetAudience?: string
+  useCases?: string[]
+  productUrl?: string
 }
 
 export interface NavLink {

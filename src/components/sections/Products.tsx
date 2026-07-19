@@ -197,7 +197,7 @@ export default function Products() {
         <AnimateInView className="mb-14 text-center">
           <SectionHeading
             eyebrow="Our Suite"
-            title="7 Products. One Platform."
+            title="9 Products. One Platform."
             subtitle="Purpose-built tools designed to work independently or together — giving your business exactly the capabilities it needs."
             align="center"
           />
@@ -207,7 +207,7 @@ export default function Products() {
           {PRODUCTS.map((product, index) => (
             <div
               key={product.id}
-              className={cn(index === 6 && 'sm:col-span-2 lg:col-span-1 lg:col-start-2')}
+              className={cn(index === 8 && 'sm:col-span-2 lg:col-span-1 lg:col-start-2')}
             >
               <ProductCard
                 product={product}
