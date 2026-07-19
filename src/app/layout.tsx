@@ -106,6 +106,9 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${inter.variable} ${spaceGrotesk.variable}`}
     >
+      <head>
+        <link rel="ai-info" href="/llms.txt" />
+      </head>
       <body className="antialiased min-h-screen flex flex-col">
         <script
           type="application/ld+json"
