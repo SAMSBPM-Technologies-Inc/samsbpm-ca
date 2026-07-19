@@ -4,47 +4,43 @@
 
 @layer base {
   :root {
-    --background: #ffffff;
-    --foreground: #0f172a;
-    --muted: #f1f5f9;
-    --muted-foreground: #64748b;
-    --border: #e2e8f0;
-    --card: #ffffff;
-    --card-foreground: #0f172a;
+    /* Warm cream — not clinical white */
+    --background:        #f8f5ef;
+    --foreground:        #16120d;
+    --muted:             #ede9e0;
+    --muted-foreground:  #7a6f62;
+    --border:            #ddd8ce;
+    --card:              #fdfbf7;
+    --card-foreground:   #16120d;
+    --ink:               #16120d;
+    --ink-light:         #2e2820;
     scroll-behavior: smooth;
   }
 
   .dark {
-    --background: #0a0a0f;
-    --foreground: #f1f5f9;
-    --muted: #1e1e2e;
-    --muted-foreground: #94a3b8;
-    --border: #1e293b;
-    --card: #0f0f1a;
-    --card-foreground: #f1f5f9;
+    /* Warm dark — not blue-tinted */
+    --background:        #0e0c09;
+    --foreground:        #f0ece4;
+    --muted:             #1e1a14;
+    --muted-foreground:  #9a9082;
+    --border:            #2a2420;
+    --card:              #141109;
+    --card-foreground:   #f0ece4;
+    --ink:               #f0ece4;
+    --ink-light:         #c8c0b4;
   }
 
-  /* Smooth, almost imperceptible theme transition — color props only, never transform/opacity */
-  *,
-  *::before,
-  *::after {
+  /* Colour transitions only — never fight Framer Motion */
+  *, *::before, *::after {
     box-sizing: border-box;
-    transition-property: background-color, border-color, color, fill, stroke, box-shadow;
+    transition-property: background-color, border-color, color, fill, stroke;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 500ms;
+    transition-duration: 400ms;
   }
-
-  /* Let Framer Motion own opacity and transforms without interference */
-  [style*="transform"],
-  [style*="opacity"] {
-    transition-property: background-color, border-color, color, fill, stroke, box-shadow !important;
+  [style*="transform"], [style*="opacity"] {
+    transition-property: background-color, border-color, color, fill, stroke !important;
   }
-
-  /* Exclude elements where transitions would fight with animations */
-  .no-transition,
-  .no-transition * {
-    transition: none !important;
-  }
+  .no-transition, .no-transition * { transition: none !important; }
 
   body {
     color: var(--foreground);
@@ -56,39 +52,63 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-space-grotesk), system-ui, sans-serif;
+    letter-spacing: -0.02em;
   }
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .text-balance { text-wrap: balance; }
+
+  /* ─── Layout ─────────────────────────────────── */
+  .section-padding  { @apply py-24 px-4 sm:px-6 lg:px-8; }
+  .container-max    { @apply max-w-7xl mx-auto; }
+  .container-narrow { @apply max-w-5xl mx-auto; }
+
+  /* ─── Colour helpers ──────────────────────────── */
+  .text-muted    { color: var(--muted-foreground); }
+  .bg-muted      { background-color: var(--muted); }
+  .border-default { border-color: var(--border); }
+
+  /* ─── Typography scale ────────────────────────── */
+  .display-2xl {
+    @apply font-display font-black leading-[0.88] tracking-[-0.04em];
+    font-size: clamp(3.5rem, 9vw, 7.5rem);
+  }
+  .display-xl {
+    @apply font-display font-black leading-[0.92] tracking-[-0.03em];
+    font-size: clamp(2.5rem, 6vw, 5rem);
+  }
+  .display-lg {
+    @apply font-display font-bold leading-tight tracking-[-0.025em];
+    font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  }
+  .label-mono {
+    @apply font-mono text-xs tracking-[0.18em] uppercase;
   }
 
-  .section-padding {
-    @apply py-20 px-4 sm:px-6 lg:px-8;
-  }
+  /* ─── Divider ─────────────────────────────────── */
+  .rule { @apply border-t border-[var(--border)]; }
 
-  .container-max {
-    @apply max-w-7xl mx-auto;
-  }
+  /* ─── Accent text ─────────────────────────────── */
+  .text-accent { color: #f97316; }
 
-  .text-muted {
-    color: var(--muted-foreground);
-  }
-
-  .bg-muted {
-    background-color: var(--muted);
-  }
-
-  .border-default {
-    border-color: var(--border);
-  }
-
-  /* Gradient text utility */
+  /* ─── Gradient text (orange) ─────────────────── */
   .gradient-text {
     background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  /* ─── Cards ──────────────────────────────────── */
+  .card-flat {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+  }
+  .card-ink {
+    background: var(--ink);
+    color: var(--background);
+    border-radius: 1rem;
   }
 }

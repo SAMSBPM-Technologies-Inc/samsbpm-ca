@@ -37,10 +37,12 @@ const config: Config = {
         display: ['var(--font-space-grotesk)', 'system-ui', 'sans-serif'],
       },
       backgroundImage: {
-        'gradient-brand':  'linear-gradient(135deg, #f97316 0%, #ea580c 100%)',
-        'gradient-hero':   'radial-gradient(ellipse 80% 60% at 50% -10%, #7c2d12 0%, #0f0f13 65%)',
-        'gradient-subtle': 'linear-gradient(180deg, transparent 0%, rgba(249,115,22,0.04) 100%)',
-        'gradient-card':   'linear-gradient(135deg, rgba(249,115,22,0.08) 0%, rgba(234,88,12,0.08) 100%)',
+        'gradient-brand':    'linear-gradient(135deg, #f97316 0%, #ea580c 100%)',
+        'gradient-hero':     'radial-gradient(ellipse 70% 50% at 50% -5%, #7c2d12 0%, #0e0c09 60%)',
+        'gradient-subtle':   'linear-gradient(180deg, transparent 0%, rgba(249,115,22,0.03) 100%)',
+        'gradient-card':     'linear-gradient(135deg, rgba(249,115,22,0.06) 0%, rgba(234,88,12,0.06) 100%)',
+        'gradient-warm':     'linear-gradient(180deg, #f8f5ef 0%, #f0ece0 100%)',
+        'gradient-ink':      'linear-gradient(135deg, #16120d 0%, #2e2820 100%)',
       },
       boxShadow: {
         'brand-sm':   '0 2px 8px rgba(249, 115, 22, 0.25)',

@@ -4,7 +4,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
 import { useScrolled } from '@/hooks/useScrolled'
-import { Button } from '@/components/ui/Button'
 import { ThemeToggle } from '@/components/ui/ThemeToggle'
 import { NAV_LINKS } from '@/lib/constants'
 import { cn } from '@/lib/cn'
@@ -15,10 +14,7 @@ export default function Navbar() {
 
   const handleNavClick = (href: string) => {
     setMobileOpen(false)
-    const el = document.querySelector(href)
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' })
-    }
+    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' })
   }
 
   return (
@@ -26,108 +22,87 @@ export default function Navbar() {
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
         scrolled
-          ? 'backdrop-blur-md bg-[var(--background)]/80 border-b border-[var(--border)] shadow-sm'
-          : 'bg-transparent'
+          ? 'bg-[var(--background)]/90 backdrop-blur-md border-b border-[var(--border)]'
+          : 'bg-[var(--background)]'
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-18">
+        <div className="flex items-center justify-between h-[72px]">
+
           {/* Logo */}
-          <Link
-            href="/"
-            className="flex items-center group focus-visible:outline-none"
-            aria-label="SAMSBPM Technologies homepage"
-          >
+          <Link href="/" aria-label="SAMSBPM Technologies homepage" className="flex-shrink-0">
             <Image
               src="/samsbpm-lockup.svg"
-              alt="samsbpm – small business, big tools"
-              width={200}
-              height={55}
+              alt="SAMSBPM Technologies"
+              width={180}
+              height={50}
               priority
-              className="h-11 w-auto dark:hidden"
+              className="h-10 w-auto dark:hidden"
             />
             <Image
               src="/samsbpm-lockup-dark.svg"
-              alt="samsbpm – small business, big tools"
-              width={200}
-              height={55}
+              alt="SAMSBPM Technologies"
+              width={180}
+              height={50}
               priority
-              className="h-11 w-auto hidden dark:block"
+              className="h-10 w-auto hidden dark:block"
             />
           </Link>
 
-          {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-1" aria-label="Main navigation">
+          {/* Desktop nav */}
+          <nav className="hidden lg:flex items-center gap-0.5" aria-label="Main navigation">
             {NAV_LINKS.map((link) => (
               <button
                 key={link.href}
                 onClick={() => handleNavClick(link.href)}
-                className={cn(
-                  'px-3.5 py-2 rounded-lg text-sm font-medium',
-                  'text-[var(--muted-foreground)] hover:text-[var(--foreground)]',
-                  'hover:bg-[var(--muted)] transition-all duration-150',
-                  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500'
-                )}
+                className="px-4 py-2 text-sm text-[var(--muted-foreground)] hover:text-[var(--foreground)] rounded-lg hover:bg-[var(--muted)] transition-colors"
               >
                 {link.label}
               </button>
             ))}
           </nav>
 
-          {/* Right: theme + CTA */}
+          {/* Right actions */}
           <div className="flex items-center gap-2">
             <ThemeToggle />
-            <Button
-              variant="primary"
-              size="sm"
-              className="hidden sm:inline-flex"
+            <button
               onClick={() => handleNavClick('#contact')}
+              className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-[var(--foreground)] text-[var(--background)] text-sm font-semibold hover:bg-brand-500 transition-colors"
             >
               Request Demo
-            </Button>
+            </button>
 
-            {/* Mobile hamburger */}
+            {/* Mobile toggle */}
             <button
-              className={cn(
-                'lg:hidden w-9 h-9 rounded-lg flex items-center justify-center',
-                'text-[var(--muted-foreground)] hover:text-[var(--foreground)]',
-                'hover:bg-[var(--muted)] transition-all duration-150',
-                'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500'
-              )}
               onClick={() => setMobileOpen(!mobileOpen)}
+              className="lg:hidden w-9 h-9 rounded-lg flex items-center justify-center text-[var(--muted-foreground)] hover:text-[var(--foreground)] hover:bg-[var(--muted)] transition-colors"
               aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={mobileOpen}
             >
-              {mobileOpen ? <X size={20} /> : <Menu size={20} />}
+              {mobileOpen ? <X size={18} /> : <Menu size={18} />}
             </button>
           </div>
         </div>
 
         {/* Mobile drawer */}
         {mobileOpen && (
-          <div className="lg:hidden border-t border-[var(--border)] py-4 space-y-1 bg-[var(--background)]/95 backdrop-blur-md">
+          <div className="lg:hidden border-t border-[var(--border)] py-4 space-y-0.5 bg-[var(--background)]">
             {NAV_LINKS.map((link) => (
               <button
                 key={link.href}
                 onClick={() => handleNavClick(link.href)}
-                className={cn(
-                  'w-full text-left px-4 py-2.5 rounded-lg text-sm font-medium',
-                  'text-[var(--muted-foreground)] hover:text-[var(--foreground)]',
-                  'hover:bg-[var(--muted)] transition-colors duration-150'
-                )}
+                className="w-full text-left px-4 py-2.5 text-sm text-[var(--muted-foreground)] hover:text-[var(--foreground)] hover:bg-[var(--muted)] rounded-lg transition-colors"
               >
                 {link.label}
               </button>
             ))}
-            <div className="pt-2 px-4">
-              <Button
-                variant="primary"
-                size="md"
-                className="w-full"
+            <div className="pt-3 px-2">
+              <button
                 onClick={() => handleNavClick('#contact')}
+                className="w-full py-2.5 rounded-lg bg-[var(--foreground)] text-[var(--background)] text-sm font-semibold hover:bg-brand-500 transition-colors"
               >
                 Request Demo
-              </Button>
+              </button>
             </div>
           </div>
         )}
