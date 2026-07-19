@@ -162,7 +162,8 @@ export default function Contact() {
                           {p.name}
                         </option>
                       ))}
-                      <option value="custom">Custom Solution</option>
+                      <option value="custom-ai-solution">Custom AI Solution</option>
+                      <option value="custom">Other Custom Solution</option>
                     </select>
                   </div>
 

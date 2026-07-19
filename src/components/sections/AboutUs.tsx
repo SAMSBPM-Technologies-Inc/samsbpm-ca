@@ -60,6 +60,7 @@ export default function AboutUs() {
                       { icon: '💼', label: 'Portfolio Platform', desc: 'Real-time Portfolios',     color: 'indigo'  },
                       { icon: '🧾', label: 'BillBridge',        desc: 'Invoice Management',        color: 'violet'  },
                       { icon: '🔄', label: 'ServStack',         desc: 'Subscription Services',     color: 'cyan'    },
+                      { icon: '✨', label: 'Custom AI',          desc: 'Bespoke AI Solutions',      color: 'rose'    },
                     ].map((item) => (
                       <div
                         key={item.label}
@@ -81,7 +82,7 @@ export default function AboutUs() {
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                   <span className="text-sm font-medium text-[var(--foreground)]">
-                    9 Products Active
+                    10 Products Active
                   </span>
                 </div>
               </div>

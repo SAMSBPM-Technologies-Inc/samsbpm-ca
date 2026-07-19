@@ -88,7 +88,7 @@ export default function Hero() {
           className="mt-16 flex flex-wrap items-center justify-center gap-8"
         >
           {[
-            { value: '9+',   label: 'Products & Solutions'  },
+            { value: '10+',  label: 'Products & Solutions'  },
             { value: '100%', label: 'Canadian-owned'         },
             { value: '∞',    label: 'Scalable Architecture' },
           ].map((stat) => (

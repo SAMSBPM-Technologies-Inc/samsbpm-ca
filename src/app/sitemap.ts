@@ -23,6 +23,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     ...productPages,
     {
+      url: `${base}/services/custom-ai`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
       url: `${base}/privacy`,
       lastModified: now,
       changeFrequency: 'monthly',

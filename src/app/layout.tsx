@@ -143,6 +143,7 @@ export default function RootLayout({
                 '@type': 'OfferCatalog',
                 name: 'SAMSBPM Products',
                 itemListElement: [
+                  { '@type': 'Service',             name: 'Custom AI Solutions',        description: 'Bespoke AI development including LLM integrations, chatbots, document intelligence, and workflow automation for Canadian businesses.', url: 'https://samsbpm.ca/services/custom-ai' },
                   { '@type': 'SoftwareApplication', name: 'AutoOrderSync Tool',        applicationCategory: 'BusinessApplication', operatingSystem: 'Web', url: 'https://samsbpm.ca/#products' },
                   { '@type': 'SoftwareApplication', name: 'BillBridge',                applicationCategory: 'BusinessApplication', operatingSystem: 'Web', url: 'https://billbridge.ca'         },
                   { '@type': 'SoftwareApplication', name: 'ServStack',                 applicationCategory: 'BusinessApplication', operatingSystem: 'Web', url: 'https://servstack.ca'          },

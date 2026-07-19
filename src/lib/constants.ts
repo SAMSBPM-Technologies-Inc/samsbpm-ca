@@ -212,6 +212,37 @@ export const PRODUCTS: Product[] = [
     productUrl: 'https://billbridge.ca',
   },
   {
+    id: 'custom-ai',
+    name: 'Custom AI Solutions',
+    tagline: 'Bespoke AI built around your business — from idea to production.',
+    description:
+      'SAMSBPM designs and builds custom AI solutions tailored to your specific business challenges — intelligent automation, AI-powered workflows, LLM integrations, data pipelines, and more. No off-the-shelf limitations.',
+    icon: 'Sparkles',
+    gradient: 'from-rose-500 to-orange-500',
+    badge: 'Custom',
+    badgeColor: 'rose',
+    features: [
+      'AI workflow automation & process intelligence',
+      'LLM integration (OpenAI, Claude, custom models)',
+      'Custom chatbots & AI-powered customer support',
+      'Data pipelines & AI-ready infrastructure',
+      'Document parsing & intelligent data extraction',
+      'End-to-end build: discovery, design, deployment',
+    ],
+    seoTitle: 'Custom AI Solutions Canada — AI Software Development for Businesses | SAMSBPM',
+    seoDescription: 'SAMSBPM Technologies builds custom AI solutions for Canadian businesses — AI workflow automation, LLM integrations, intelligent chatbots, document parsing, and data pipelines. From idea to production.',
+    keywords: ['custom AI solutions Canada', 'AI software development Canada', 'business AI automation Canada', 'LLM integration Canada', 'AI chatbot development Canada', 'custom AI for small business Canada', 'AI workflow automation Canada', 'artificial intelligence solutions Canada'],
+    longDescription: 'Off-the-shelf AI tools solve generic problems. SAMSBPM builds AI solutions designed specifically for your business — your data, your workflows, your outcomes. Whether you need to automate a complex internal process with AI, integrate a large language model into your product, build an intelligent customer-facing chatbot, or create a data pipeline that feeds your AI systems, our team takes you from discovery through to production deployment. We work with Canadian businesses of all sizes to identify where AI can create the most value and then build it — reliably, securely, and in compliance with Canadian data regulations.',
+    targetAudience: 'Canadian businesses of all sizes looking to leverage AI to automate operations, enhance customer experiences, extract insights from data, or build AI-powered products.',
+    useCases: [
+      'Automating invoice and document processing with AI extraction',
+      'Building a custom AI chatbot for customer support or internal Q&A',
+      'Integrating GPT or Claude into an existing business product',
+      'Creating AI-powered order triage and routing workflows',
+      'Building data pipelines that feed business intelligence AI models',
+    ],
+  },
+  {
     id: 'servstack',
     name: 'ServStack',
     tagline: 'Subscription plans for recurring-service businesses.',
@@ -374,8 +405,20 @@ export const FAQS = [
     answer: 'Most businesses are up and running within days, not months. Our team handles configuration, integration, and onboarding tailored to your workflows. Contact us for a free 30-minute discovery call.',
   },
   {
+    question: 'Do you build custom AI solutions for businesses?',
+    answer: 'Yes. Custom AI development is a core SAMSBPM service. We build AI workflow automation, LLM integrations (OpenAI, Claude, and others), intelligent chatbots, document parsing systems, and data pipelines — all tailored to your specific business needs and compliant with Canadian data regulations.',
+  },
+  {
+    question: 'What kinds of custom AI solutions does SAMSBPM build?',
+    answer: 'We build: AI-powered workflow automation, custom chatbots for customer support or internal Q&A, LLM integrations into existing products, intelligent document and invoice parsing, data pipelines for AI-ready infrastructure, and end-to-end AI product development from discovery to production.',
+  },
+  {
+    question: 'Can SAMSBPM integrate AI into my existing business software?',
+    answer: 'Yes. We specialize in integrating AI capabilities — including OpenAI GPT and Anthropic Claude — into existing business systems, websites, and internal tools. Whether it\'s adding a smart search, an AI assistant, or automated document processing, we handle the integration end-to-end.',
+  },
+  {
     question: 'Do you offer custom software solutions?',
-    answer: 'Yes. In addition to our off-the-shelf products, SAMSBPM builds custom digital solutions. Contact us at contact@samsbpm.com to discuss your specific requirements.',
+    answer: 'Yes. In addition to our off-the-shelf products, SAMSBPM builds fully custom digital and AI solutions. Contact us at contact@samsbpm.com to discuss your specific requirements.',
   },
   {
     question: 'Which industries does SAMSBPM serve?',
