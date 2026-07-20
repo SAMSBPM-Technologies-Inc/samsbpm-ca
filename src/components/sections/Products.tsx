@@ -220,7 +220,7 @@ export default function Products() {
         <AnimateInView className="mt-16" delay={0.1}>
           <div className="flex items-center gap-4 mb-6">
             <div className="h-px flex-1 bg-[var(--border)]" />
-            <span className="label-mono text-[var(--muted-foreground)]">Developer Tools</span>
+            <span className="label-mono text-[var(--muted-foreground)]">Business Tools</span>
             <div className="h-px flex-1 bg-[var(--border)]" />
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

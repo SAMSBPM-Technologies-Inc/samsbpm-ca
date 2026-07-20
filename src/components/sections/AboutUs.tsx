@@ -53,8 +53,8 @@ export default function AboutUs() {
                   <div className="grid grid-cols-2 gap-4">
                     {[
                       { icon: '⚡', label: 'AutoOrderSync',     desc: 'WhatsApp → Orders',         color: 'emerald' },
-                      { icon: '🔌', label: 'Vedoryx-API',       desc: 'Developer Tool',            color: 'blue'    },
-                      { icon: '📊', label: 'Dashboard',         desc: 'Developer Tool',            color: 'amber'   },
+                      { icon: '🔌', label: 'Vedoryx-API',       desc: 'Business Tool',            color: 'blue'    },
+                      { icon: '📊', label: 'Dashboard',         desc: 'Business Tool',            color: 'amber'   },
                       { icon: '🛍️', label: 'eCommerce',         desc: 'Store Templates',           color: 'orange'  },
                       { icon: '🏠', label: 'Rental RMS',        desc: 'Availability & Bookings',   color: 'teal'    },
                       { icon: '💼', label: 'Portfolio Platform', desc: 'Real-time Portfolios',     color: 'indigo'  },
