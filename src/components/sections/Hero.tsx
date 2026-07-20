@@ -72,7 +72,7 @@ export default function Hero() {
               {/* ── Stats ── */}
               <motion.div {...fade(0.4)} className="flex gap-8 mt-12 pt-10 border-t border-[var(--border)]">
                 {[
-                  { value: '10+',  label: 'Products & services' },
+                  { value: '9+',   label: 'Products & services' },
                   { value: '100%', label: 'Canadian-owned'       },
                   { value: '∞',    label: 'Scalable'             },
                 ].map((s) => (

@@ -2,12 +2,14 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { ArrowLeft, CheckCircle2, ExternalLink } from 'lucide-react'
-import { PRODUCTS, COMPANY_INFO } from '@/lib/constants'
+import { PRODUCTS, TOOLS, COMPANY_INFO } from '@/lib/constants'
 
 export const dynamic = 'force-static'
 
+const ALL_ITEMS = [...PRODUCTS, ...TOOLS]
+
 export async function generateStaticParams() {
-  return PRODUCTS.map((p) => ({ id: p.id }))
+  return ALL_ITEMS.map((p) => ({ id: p.id }))
 }
 
 export async function generateMetadata({
@@ -16,7 +18,7 @@ export async function generateMetadata({
   params: Promise<{ id: string }>
 }): Promise<Metadata> {
   const { id } = await params
-  const product = PRODUCTS.find((p) => p.id === id)
+  const product = ALL_ITEMS.find((p) => p.id === id)
   if (!product) return {}
 
   return {
@@ -48,7 +50,7 @@ export default async function ProductPage({
   params: Promise<{ id: string }>
 }) {
   const { id } = await params
-  const product = PRODUCTS.find((p) => p.id === id)
+  const product = ALL_ITEMS.find((p) => p.id === id)
   if (!product) notFound()
 
   const jsonLd = {

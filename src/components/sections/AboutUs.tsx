@@ -53,8 +53,8 @@ export default function AboutUs() {
                   <div className="grid grid-cols-2 gap-4">
                     {[
                       { icon: '⚡', label: 'AutoOrderSync',     desc: 'WhatsApp → Orders',         color: 'emerald' },
-                      { icon: '🔌', label: 'Vedoryx-API',       desc: 'Scalable APIs',             color: 'blue'    },
-                      { icon: '📊', label: 'Dashboard',         desc: 'Analytics & Admin',         color: 'amber'   },
+                      { icon: '🔌', label: 'Vedoryx-API',       desc: 'Developer Tool',            color: 'blue'    },
+                      { icon: '📊', label: 'Dashboard',         desc: 'Developer Tool',            color: 'amber'   },
                       { icon: '🛍️', label: 'eCommerce',         desc: 'Store Templates',           color: 'orange'  },
                       { icon: '🏠', label: 'Rental RMS',        desc: 'Availability & Bookings',   color: 'teal'    },
                       { icon: '💼', label: 'Portfolio Platform', desc: 'Real-time Portfolios',     color: 'indigo'  },
@@ -83,7 +83,7 @@ export default function AboutUs() {
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                   <span className="text-sm font-medium text-[var(--foreground)]">
-                    11 Products Active
+                    9 Products · 2 Tools
                   </span>
                 </div>
               </div>

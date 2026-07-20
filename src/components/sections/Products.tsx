@@ -11,7 +11,7 @@ import { AnimateInView } from '@/components/ui/AnimateInView'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
-import { PRODUCTS } from '@/lib/constants'
+import { PRODUCTS, TOOLS } from '@/lib/constants'
 import type { Product } from '@/lib/types'
 import { cn } from '@/lib/cn'
 
@@ -199,28 +199,60 @@ export default function Products() {
         <AnimateInView className="mb-14 text-center">
           <SectionHeading
             eyebrow="Our Suite"
-            title="11 Products & Services. One Partner."
-            subtitle="Purpose-built tools and custom AI solutions designed to work independently or together — giving your business exactly the capabilities it needs."
+            title="9 Products & Services. One Partner."
+            subtitle="Purpose-built software and custom AI solutions designed to work independently or together — giving your business exactly the capabilities it needs."
             align="center"
           />
         </AnimateInView>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {PRODUCTS.map((product, index) => (
-            <div
+            <ProductCard
               key={product.id}
-              className={cn(index === 10 && 'sm:col-span-2 lg:col-span-1 lg:col-start-2')}
-            >
-              <ProductCard
-                product={product}
-                index={index}
-                onClick={() => setActiveProduct(product)}
-              />
-            </div>
+              product={product}
+              index={index}
+              onClick={() => setActiveProduct(product)}
+            />
           ))}
         </div>
 
-        <AnimateInView className="mt-12 text-center" delay={0.3}>
+        {/* ── Developer Tools ── */}
+        <AnimateInView className="mt-16" delay={0.1}>
+          <div className="flex items-center gap-4 mb-6">
+            <div className="h-px flex-1 bg-[var(--border)]" />
+            <span className="label-mono text-[var(--muted-foreground)]">Developer Tools</span>
+            <div className="h-px flex-1 bg-[var(--border)]" />
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {TOOLS.map((tool, index) => {
+              const Icon = iconMap[tool.icon] ?? Layers
+              return (
+                <AnimateInView key={tool.id} delay={index * 0.08}>
+                  <motion.div
+                    whileHover={{ y: -4, boxShadow: '0 8px 24px rgba(0,0,0,0.10)' }}
+                    transition={{ type: 'spring', stiffness: 350, damping: 28 }}
+                    onClick={() => setActiveProduct(tool)}
+                    className="group flex items-center gap-5 p-5 rounded-2xl border border-[var(--border)] bg-[var(--card)] cursor-pointer hover:border-brand-500/30 transition-colors"
+                  >
+                    <div className={cn(
+                      'w-11 h-11 rounded-xl bg-gradient-to-br flex items-center justify-center flex-shrink-0',
+                      tool.gradient
+                    )}>
+                      <Icon size={20} className="text-white" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-semibold text-sm text-[var(--foreground)]">{tool.name}</p>
+                      <p className="text-xs text-[var(--muted-foreground)] mt-0.5 truncate">{tool.tagline}</p>
+                    </div>
+                    <ArrowRight size={14} className="text-[var(--muted-foreground)] opacity-0 group-hover:opacity-100 group-hover:text-brand-500 transition-all flex-shrink-0" />
+                  </motion.div>
+                </AnimateInView>
+              )
+            })}
+          </div>
+        </AnimateInView>
+
+        <AnimateInView className="mt-10 text-center" delay={0.3}>
           <p className="text-[var(--muted-foreground)] text-sm">
             Need something custom?{' '}
             <a

@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next'
-import { PRODUCTS } from '@/lib/constants'
+import { PRODUCTS, TOOLS } from '@/lib/constants'
 
 export const dynamic = 'force-static'
 
@@ -14,6 +14,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
+  const toolPages: MetadataRoute.Sitemap = TOOLS.map((t) => ({
+    url: `${base}/products/${t.id}`,
+    lastModified: now,
+    changeFrequency: 'monthly',
+    priority: 0.6,
+  }))
+
   return [
     {
       url: base,
@@ -22,6 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     ...productPages,
+    ...toolPages,
     {
       url: `${base}/services/custom-ai`,
       lastModified: now,
