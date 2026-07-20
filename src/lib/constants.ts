@@ -430,6 +430,10 @@ export const FAQS = [
     answer: 'ServStack is a subscription management platform for recurring-service businesses such as meal delivery, cleaning services, and lawn care. Businesses create subscription plans, customers subscribe through a self-serve portal, and Stripe handles all billing. Available at servstack.ca.',
   },
   {
+    question: 'What is BookingBuddy and who is it for?',
+    answer: 'BookingBuddy is a multi-tenant reservation SaaS built for any service business — salons, clinics, restaurants, sports courts, spas, and more. It lets customers book appointments online or through WhatsApp, where an AI agent handles the full scheduling conversation. BookingBuddy manages staff availability, prevents double-bookings, and sends automated confirmations and reminders.',
+  },
+  {
     question: 'Is SAMSBPM software PIPEDA-compliant?',
     answer: 'Yes. All SAMSBPM products are built and hosted in Canada, designed to comply with PIPEDA (Canada\'s Personal Information Protection and Electronic Documents Act). Your data stays in Canada.',
   },
