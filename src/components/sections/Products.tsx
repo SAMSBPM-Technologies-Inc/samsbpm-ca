@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import {
   MessageSquare, Layers, BarChart3, ShoppingCart,
   Globe, Calendar, Layout, ArrowRight, X,
-  Receipt, Repeat, Sparkles,
+  Receipt, Repeat, Sparkles, CalendarCheck,
   LucideIcon,
 } from 'lucide-react'
 import { AnimateInView } from '@/components/ui/AnimateInView'
@@ -26,6 +26,7 @@ const iconMap: Record<string, LucideIcon> = {
   Receipt,
   Repeat,
   Sparkles,
+  CalendarCheck,
 }
 
 type BadgeColor = React.ComponentProps<typeof Badge>['color']
@@ -198,7 +199,7 @@ export default function Products() {
         <AnimateInView className="mb-14 text-center">
           <SectionHeading
             eyebrow="Our Suite"
-            title="10 Products & Services. One Partner."
+            title="11 Products & Services. One Partner."
             subtitle="Purpose-built tools and custom AI solutions designed to work independently or together — giving your business exactly the capabilities it needs."
             align="center"
           />
@@ -208,7 +209,7 @@ export default function Products() {
           {PRODUCTS.map((product, index) => (
             <div
               key={product.id}
-              className={cn(index === 9 && 'sm:col-span-2 lg:col-span-1 lg:col-start-2')}
+              className={cn(index === 10 && 'sm:col-span-2 lg:col-span-1 lg:col-start-2')}
             >
               <ProductCard
                 product={product}

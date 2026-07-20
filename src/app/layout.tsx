@@ -156,6 +156,7 @@ export default function RootLayout({
                   { '@type': 'SoftwareApplication', name: 'Simple Website Builder',    applicationCategory: 'BusinessApplication', operatingSystem: 'Web', url: 'https://samsbpm.ca/#products' },
                   { '@type': 'SoftwareApplication', name: 'Rental Management System',  applicationCategory: 'BusinessApplication', operatingSystem: 'Web', url: 'https://samsbpm.ca/#products' },
                   { '@type': 'SoftwareApplication', name: 'Portfolio Hosting Platform',applicationCategory: 'BusinessApplication', operatingSystem: 'Web', url: 'https://samsbpm.ca/#products' },
+                  { '@type': 'SoftwareApplication', name: 'BookingBuddy',              applicationCategory: 'BusinessApplication', operatingSystem: 'Web', url: 'https://samsbpm.ca/products/bookingbuddy' },
                 ],
               },
             }),
