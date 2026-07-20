@@ -27,9 +27,9 @@ All products are built and hosted in Canada. SAMSBPM is PIPEDA-compliant and Can
 ### Vedoryx-API
 - URL: https://samsbpm.ca/products/api-vedoryx
 - Category: API platform, backend infrastructure
-- Description: A scalable multi-tenant backend API platform with intelligent rate limiting, auto-versioning, webhook support, role-based access control, and 99.9% uptime SLA.
-- Best for: Canadian SaaS startups, development agencies, businesses needing a multi-tenant API backbone.
-- Key features: Multi-tenant architecture, rate limiting, auto-generated documentation, webhook/event streaming, RBAC, 99.9% uptime SLA.
+- Description: A scalable backend API platform with intelligent rate limiting, auto-versioning, webhook support, role-based access control, and 99.9% uptime SLA. Each business gets fully isolated, secure data.
+- Best for: Canadian SaaS startups, development agencies, businesses needing a scalable and secure API backbone.
+- Key features: Isolated data per business, rate limiting, auto-generated documentation, webhook/event streaming, RBAC, 99.9% uptime SLA.
 
 ### Vedoryx-Dashboard
 - URL: https://samsbpm.ca/products/dashboard-vedoryx
@@ -71,9 +71,9 @@ All products are built and hosted in Canada. SAMSBPM is PIPEDA-compliant and Can
 - Live product: https://billbridge.ca
 - GitHub: https://github.com/SAMSBPM-Technologies-Inc/BillBridge
 - Category: Invoicing software, billing SaaS
-- Description: Multi-tenant invoice management SaaS for Canadian consulting firms and professional services businesses. Create, send, and track professional invoices with Stripe payment integration and role-based team access.
+- Description: Professional invoicing platform for Canadian consulting firms and professional services businesses. Create, send, and track invoices with Stripe payment integration, role-based team access, and real-time financial reporting.
 - Best for: IT consulting firms, marketing agencies, independent consultants, professional services businesses.
-- Key features: Multi-tenant architecture, professional invoice creation & delivery, Stripe payment tracking, role-based access (admin/staff), automated tenant provisioning, real-time financial reporting.
+- Key features: Isolated data per firm, professional invoice creation & delivery, Stripe payment tracking, role-based access (admin/staff), instant email delivery, real-time financial reporting.
 
 ### Custom AI Solutions
 - URL: https://samsbpm.ca/products/custom-ai
@@ -88,9 +88,9 @@ All products are built and hosted in Canada. SAMSBPM is PIPEDA-compliant and Can
 - URL: https://samsbpm.ca/products/bookingbuddy
 - GitHub: https://github.com/SAMSBPM-Technologies-Inc/BookingBuddy
 - Category: Reservation & booking SaaS, appointment scheduling
-- Description: Multi-tenant, multi-industry reservation SaaS for salons, clinics, restaurants, sports courts, and any service business. Customers book online or via WhatsApp — the AI agent handles the full scheduling conversation. Includes staff and resource management, smart availability engine, coupon support, and automated notifications.
+- Description: Reservation platform for salons, clinics, restaurants, sports courts, and any service business. Customers book online or via WhatsApp — the AI agent handles the full scheduling conversation. Includes staff and resource management, smart availability engine, coupon support, and automated notifications.
 - Best for: Salons, barbershops, clinics, physiotherapy practices, restaurants, sports facilities, spas, personal trainers, and any business that takes appointments or reservations.
-- Key features: Universal booking engine for any service industry, WhatsApp AI agent for conversational booking, staff & resource scheduling, real-time availability with double-booking prevention, automated confirmations & reminders, coupon management, multi-tenant architecture, role-based access.
+- Key features: Universal booking engine for any service industry, WhatsApp AI agent for conversational booking, staff & resource scheduling, real-time availability with double-booking prevention, automated confirmations & reminders, coupon management, role-based access.
 
 ### ServStack
 - URL: https://samsbpm.ca/products/servstack
